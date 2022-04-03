@@ -2,29 +2,40 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import MainLogo from "../Icons/FAVI_ 4.png";
-import { Typography, Button, TextField } from "@mui/material";
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import "./Login.css";
-import MyButton from "../Re-usable Components/Button/MyButton";
-import { TextInput } from "../Re-usable Components/Button/TextInput";
-
+import MainLogo from "../../Icons/FAVI_ 4.png";
+import { TextInput } from "../../Re-usable Components/Button/TextInput";
+import MyButton from "../../Re-usable Components/Button/MyButton";
 
 const checkData = [
   {
-    fieldName: "username",
-    placeHolder: "Username",
+    fieldName: "firstName",
+    placeHolder: "First Name",
     type: "text",
   },
   {
-    fieldName: "password",
-    placeHolder: "Password",
-    type: "password",
+    fieldName: "lastName",
+    placeHolder: "Last Name",
+    type: "text",
   },
+  {
+      fieldName:"username",
+      placeHolder:"Username",
+      type:"text"
+  },
+  {
+      fieldName:"password",
+      placeHolder:"Password",
+      type:"Password"
+  },
+  {
+      fieldName:"birthDate",
+      placeHolder:"Birth Date MM/DD/YYYY",
+      type:"text"
+  }
 ];
 
-export const Login = () => {
+export const Signup = () => {
   const {
     register,
     handleSubmit,
@@ -39,12 +50,11 @@ export const Login = () => {
             <Grid item xs={12}>
               <img
                 src={MainLogo}
-                height="80%"
+                height="20%"
                 width="max-width"
                 style={{ marginTop: "12%" }}
               />
             </Grid>
-
             <Grid item xs={12}>
               <form
                 noValidate
@@ -64,14 +74,14 @@ export const Login = () => {
                   />
                 ))}
 
-
                 <Grid item xs={12}>
                   <MyButton colorBg="#FF92B2" textColor="white">
-                    Login
+                    Sign Up
                   </MyButton>
                 </Grid>
               </form>
             </Grid>
+
           </Grid>
         </Box>
       </Container>

@@ -41,7 +41,7 @@ export const Verification = () => {
       try{
           setErr("")
           await confirm.confirm(otp)
-          navigate('/')
+          navigate('/sign-up')
       }
       catch(err){
           setErr(err.message)
